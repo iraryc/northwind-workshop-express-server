@@ -1,22 +1,13 @@
 let express = require('express');
-let bodyParser = require('body-parser');
 let fs = require("fs");
+let cors = require("cors")
 let app = express();
 
+app.use(express.json())
+app.use(cors())
+
 // Create application/x-www-form-urlencoded parser
-let urlencodedParser = bodyParser.urlencoded({ extended: false })
-
-app.get('/index.html', function (req, res) {
-    res.sendFile( __dirname + "/public/" + "index.html" );
- })
-
-app.get('/search.html', function (req, res) {
-    res.sendFile( __dirname + "/public/" + "search.html" );
-})
- 
-app.get('/details.html', function (req, res) {
-    res.sendFile( __dirname + "/public/" + "details.html" );
-})
+let urlencodedParser = express.urlencoded({ extended: false })
 
 app.get('/api/categories', function (req, res) {
     console.log("Got a GET request for categories");
@@ -24,7 +15,7 @@ app.get('/api/categories', function (req, res) {
     data = JSON.parse(data);
     console.log( "Returning: ");
     console.log(data);
-    res.end( JSON.stringify(data) );
+    res.json( data );
 });
 
 app.get('/api/categories/:id', function (req, res) {
@@ -35,7 +26,7 @@ app.get('/api/categories/:id', function (req, res) {
     let matching = data.filter(p => p.categoryId == id);
     console.log( "Returning: " );
     console.log(matching);
-    res.end( JSON.stringify(matching) );
+    res.json( matching );
 });
 
 app.get('/api/products', function (req, res) {
@@ -44,7 +35,7 @@ app.get('/api/products', function (req, res) {
     data = JSON.parse(data);
     console.log( "Returning: ");
     console.log(data);
-    res.end( JSON.stringify(data) );
+    res.json( data );
 });
 
 app.get('/api/products/:id', function (req, res) {
@@ -55,11 +46,8 @@ app.get('/api/products/:id', function (req, res) {
     let matching = data.find(p => p.productId == id);
     console.log( "Returning: " );
     console.log(matching);
-    res.end( JSON.stringify(matching) );
+    res.json( matching );
 })
- 
-app.use(express.static('public'));
-app.use(bodyParser.urlencoded({ extended: false }));
 
 let server = app.listen(8081, function () {
    let port = server.address().port 
