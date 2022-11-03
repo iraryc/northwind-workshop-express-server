@@ -12,10 +12,10 @@ This section will discuss how to get the Northwind Grocery server up and running
   ```
   **Sample Output**
   ```bash
-    v14.15.4
+    v14.15.4            (it may be a slightly different version)
   ```
 
-  > **Note:** If you do not have node installed, you can install the LTS (Long-term Support) version from here: https://nodejs.org/en/
+  > **Note:** If you do not have Node.js installed, you can install the LTS (Long-term Support) version from here: https://nodejs.org/en/
 
 - Clone this repository to your local computer.
 
@@ -47,7 +47,7 @@ This section will discuss how to get the Northwind Grocery server up and running
     App listening at port 8081
   ```
 
-- Verify the server is working as expected by accessing http://localhost:8081/api/categories with a broswer or a third party tool like [Postman](https://www.postman.com/)
+- Verify the server is working as expected by accessing http://localhost:8081/api/categories with a browser or a third party tool like [Postman](https://www.postman.com/)
 
   **Expected output from URL**
   ```js
