@@ -1,8 +1,8 @@
 # Shop at Northwind Workshop Server
-This is intended to be the backend for the Northwind workshop.
+This is intended to be the backend for the Northwind Grocery workshop.
 
 ## Setup this server locally
-This section will discuss how to get the Shop Northwind server up and running locally
+This section will discuss how to get the Northwind Grocery server up and running locally
 
 - Verify Node.js is installed by running the following command.
   
@@ -15,7 +15,7 @@ This section will discuss how to get the Shop Northwind server up and running lo
     v14.15.4
   ```
 
-  > **Note:** If you do not have node installed you can install the LTS (Long-term Support) version from here: https://nodejs.org/en/
+  > **Note:** If you do not have node installed, you can install the LTS (Long-term Support) version from here: https://nodejs.org/en/
 
 - Clone this repository to your local computer.
 
@@ -47,14 +47,9 @@ This section will discuss how to get the Shop Northwind server up and running lo
     App listening at port 8081
   ```
 
-- Verify the server is working as expected by acessing http://localhost:8081/api/categories with a broswer or a third party tool like [Postman](https://www.postman.com/)
+- Verify the server is working as expected by accessing http://localhost:8081/api/categories with a broswer or a third party tool like [Postman](https://www.postman.com/)
 
   **Expected output from URL**
   ```js
   [{"categoryId":1,"description":"Soft drinks coffees teas beers and ales","name":"Beverages"},{"categoryId":2,"description":"Sweet and savory sauces relishes spreads and seasonings","name":"Condiments"},{"categoryId":3,"description":"Desserts candies and sweet breads","name":"Confections"},{"categoryId":4,"description":"Cheeses","name":"Dairy Products"},{"categoryId":5,"description":"Breads crackers pasta and cereal","name":"Grains/Cereals"},{"categoryId":6,"description":"Prepared meats","name":"Meat/Poultry"},{"categoryId":7,"description":"Dried fruit and bean curd","name":"Produce"},{"categoryId":8,"description":"Seaweed and fish","name":"Seafood"}]
   ```
-
-
-
-
-
