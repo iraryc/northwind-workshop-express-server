@@ -10,7 +10,7 @@ This section will discuss how to get the Northwind Grocery server up and running
   ```bash
     node -v
   ```
-  **Samlple Output**
+  **Sample Output**
   ```bash
     v14.15.4
   ```
