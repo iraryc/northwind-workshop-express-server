@@ -1,5 +1,5 @@
 # Shop at Northwind Workshop Server
-This is intended to be the backend for the Northwind Grocery workshop.
+This is intended to be the backend for the Shop at Northwind workshop.
 
 ## Setup this server locally
 This section will discuss how to get the Northwind Grocery server up and running locally
