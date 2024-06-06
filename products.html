@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Search for Products</h1>
+
+    <label for="shopDropDown">Choose an Option:</label>
+    <select name="shopDropDown" id="shopDropDown">     
+        <option value="selectOne" id="selectOne">Select One</option>
+        <option value="searchBy" id="searchBy">Search by Category</option>
+        <option value="viewAll" id="viewAll">View all</option>
+    </select>
+
+    <div id="categoryDropdownContainer" style="display:none;">
+        <label for="categoryDropdown">Choose a Category:</label>
+        <select name="categoryDropdown" id="categoryDropdown"></select>
+    </div>
+
+    <div id="productsContainer"></div>
+
+    <script src="/javascript/script.js"></script>
+</body>
+</html>
